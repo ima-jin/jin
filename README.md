@@ -25,13 +25,15 @@ Three things share the word "jin." They are different:
 ## Architecture (see #1374 + sub-issues for the full record)
 
 - **Proper native app — React Native / Expo.** No PWA-in-a-wrapper. Real iOS/Android, native presence.
-- **Server-Driven UI (SDUI), owned closed vocabulary.** The server sends a declarative surface description; the native shell renders it. We own the schema because the confirm surface is a **trust boundary** — a closed vocabulary means the rendered surface is a pure function of the signed payload ("what you approved = what the server asked"). Not raw HTML/webview. → [#1386](https://github.com/ima-jin/imajin-ai/issues/1386)
+- **Server-Driven UI (SDUI), owned closed vocabulary.** The server sends a declarative surface description; the native shell renders it. We own the schema because the confirm surface is a **trust boundary** — a closed vocabulary means the rendered surface is a pure function of the signed payload ("what you approved = what the server asked"). Not raw HTML/webview. → [#4](https://github.com/ima-jin/jin/issues/4)
 - **The session is a space of objects, not a screen.** Two layers:
   - **Scene** — persistent objects with a glyph/ambient (liveness) state.
   - **Composition** — click an object → the server composes the full surface (player / chat / signed-confirm) from the closed schema.
   - Object model is **dimension-agnostic** (`id`, `kind`, `glyph`, `composition`) — a 2D/3D spatial renderer is a *future* view over the same objects, not designed now.
 - **Immediate surfacing method:** a `list_active_objects` tool the LLM queries → ongoing concerns (video playing, chat open, task running) surfaced conversationally. Session-state made legible. Buildable now, no spatial UI.
-- **Ambient state → OSC fan-out** to physical surfaces (the Unit, Sonos). Presence/telemetry only, never auth or the signing event. → [#1385](https://github.com/ima-jin/imajin-ai/issues/1385)
+- **Ambient state → OSC fan-out** to physical surfaces (the Unit, Sonos). Presence/telemetry only, never auth or the signing event. → [#3](https://github.com/ima-jin/jin/issues/3)
+
+> **Roadmap issues (this repo):** [#1](https://github.com/ima-jin/jin/issues/1) Intention Inference epic · [#2](https://github.com/ima-jin/jin/issues/2) /jin dashboard confirm · [#3](https://github.com/ima-jin/jin/issues/3) OSC fan-out · [#4](https://github.com/ima-jin/jin/issues/4) UI schema / object model. Platform/kernel/connector work stays on [imajin-ai](https://github.com/ima-jin/imajin-ai) (#1228, #1366-line, #1373, #1293) — Jin consumes it.
 - **Security invariant:** no unauthed LLM on a public surface. Unauthed → static DID-login only; the agent backend connects **only** after a verified session, bound to the DID, `onBehalfOf` that human. Enforced at the route/socket handshake (server-layer, not a client redirect).
 
 ## MVP — "prove identity → establish presence"
