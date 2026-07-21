@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # CI stub for the bootstrap. Real steps (install, typecheck, test, expo build)
+      # land with the MVP (Phase 1). This job exists so the branch protection /
+      # required-check wiring is in place from commit one and fails LOUD, not silent.
+      - name: Bootstrap sanity check
+        run: |
+          set -euo pipefail
+          echo "Jin app shell — CI bootstrap stub."
+          test -f README.md
+          test -f .env.example
+          test -f LICENSE
+          test -f docs/DEFINITION-OF-DONE.md
+          echo "Scaffold present. OK."

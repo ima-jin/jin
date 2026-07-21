@@ -1,0 +1,33 @@
+# deps
+node_modules/
+.pnp.*
+.yarn/*
+
+# env
+.env
+.env.local
+.env.*.local
+
+# builds
+dist/
+build/
+.expo/
+*.tsbuildinfo
+
+# native
+ios/Pods/
+android/.gradle/
+android/app/build/
+*.keystore
+
+# logs
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
