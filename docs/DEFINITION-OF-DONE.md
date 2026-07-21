@@ -18,12 +18,12 @@
 
 ## Phase 2 — Roadmap articulated in this repo
 
-- [ ] v0.1 action/confirm loop (source: imajin-ai #1369, #1366-line, #1293).
+- [ ] v0.1 action/confirm loop — dashboard confirm now #2 (this repo); kernel #1366-line + #1293 stay on imajin-ai.
 - [ ] Connectors Jin orchestrates (imajin-ai #1228, #1373).
 - [ ] Forkability-hardening thread (keep the shell/domain seam clean + conformant).
-- [ ] Intention-inference vision (imajin-ai #1198, #1211–#1216).
-- [ ] UI schema / object model (imajin-ai #1386) — rehome here.
-- [ ] OSC ambient fan-out (imajin-ai #1385) — rehome here.
+- [ ] Intention-inference vision — epic now #1 (this repo); #1211–1216 completed history on imajin-ai.
+- [ ] UI schema / object model — now #4 (this repo).
+- [ ] OSC ambient fan-out — now #3 (this repo).
 
 ## Phase 3 — Migration / cleanup
 
