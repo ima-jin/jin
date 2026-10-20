@@ -5,16 +5,18 @@
 - [x] `ima-jin/jin` exists, **public**.
 - [x] Scaffold: README (apps-table row, port, "fork this to build a vertical" note, namespace note), `.env.example`, DoD doc, LICENSE, `.gitignore`, CI stub.
 - [x] Port assigned + documented: dev `3402` / prod `7402` (next free client pair).
-- [ ] CI green on first PR.
+- [x] CI green on first PR.
 
 ## Phase 1 — MVP: "prove identity → establish presence"
 
-- [ ] **DID auth** — existing sovereign login handshake (challenge → sign → verify → session). Human authenticates as their own DID.
-- [ ] **Idle presence surface** — post-auth, the presence glyph (spinning logo), idle. Framed as the first object in the scene.
-- [ ] **Shell/domain seam documented** — the interface where a vertical's intent vocabulary plugs in, real even in the MVP.
-- [ ] **Security invariant enforced** — unauthed sees static DID-login only; agent backend connects only post-session, server-layer gate (not client redirect).
+- [x] **DID auth** — existing sovereign login handshake (challenge → sign → verify → session). Human authenticates as their own DID.
+- [x] **Idle presence surface** — post-auth, the presence glyph (spinning logo), idle. Framed as the first object in the scene.
+- [x] **Shell/domain seam documented** — the interface where a vertical's intent vocabulary plugs in, real even in the MVP.
+- [x] **Security invariant enforced** — unauthed sees static DID-login only; agent backend connects only post-session, server-layer gate (not client redirect).
 
 **MVP DoD:** a human authenticates with their DID → lands on a live idle presence surface on dev; the shell/domain seam is a documented interface.
+
+> Where this goes next: [docs/vision/agentic-dashboard.md](./vision/agentic-dashboard.md) — the agentic dashboard the presence surface grows into (NOW · NEEDS YOU · RECORD), and how today's kernel `/jin` panels map up into it.
 
 ## Phase 2 — Roadmap articulated in this repo
 
